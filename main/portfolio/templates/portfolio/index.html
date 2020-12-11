@@ -1,0 +1,142 @@
+{% extends "portfolio/header.html" %}
+{% load static %}
+
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+<div class="page-header header-filter" data-parallax="true" style="background-image:url('https://techstory.in/wp-content/uploads/2018/11/cover.jpg');"></div>
+    <div class="main main-raised">
+		<div class="profile-content">
+            <div class="container">
+                <div class="row">
+	                <div class="col-md-6 ml-auto mr-auto">
+        	           <div class="profile">
+	                        <div class="avatar">
+	                            <img src="{% static 'images/image_profile.jpg' %}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+	                        </div>
+	                        <div class="name">
+	                            <h3 class="title">Akshayraj M</h3>
+								<h6>AI/ML Engineer & Developer</h6>
+								<a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-github"></i></a>
+                                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-facebook-square"></i></a>
+                                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-instagram"></i></a>
+	                        </div>
+	                    </div>
+    	            </div>
+                </div>
+                <div class="description text-center">
+                    <p>Fresh minder with design thinking skills and a passionate learner of technologies through building and experimenting. AI Enthusiast, and a strong believer of humanity. </p>
+					<h6 style="text-transform: lowercase;">
+						<a href="#" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-mobile"></i></a>(+91) 76 39 39 3821
+						<a href="#" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-envelope"></i></a>axylone@gmail.com
+					</h6>
+
+				</div>
+				<div class="row">
+					<div class="col-md-6 ml-auto mr-auto">
+                        <div class="profile-tabs">
+                          <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+							  <li class="nav-item">
+                                <a class="nav-link active" href="#works" role="tab" data-toggle="tab">
+                                  <i class="material-icons">palette</i>
+                                    Work
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#studio" role="tab" data-toggle="tab">
+                                  <i class="material-icons">school</i>
+                                  Education
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                                  <i class="material-icons">location_on</i>
+                                    Contact
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+    	    	</div>
+            </div>
+
+          <div class="tab-content tab-space">
+            <div class="tab-pane text-center gallery" id="studio">
+  				<div class="row">
+  					<h3 style="color: #131212; font-weight: bolder;">Post Graduate Diploma in Analytics and Artificial Intelligence (June,2020 to Present)</h3>
+					<p class="work-p">
+						Career break through from </b>Full stack Developer to Data Scientist </b>process is undergone with Imarticus Learning(<a href="https://www.imarticus.org/" target="_blank">www.imarticus.org</a>) partnered with Coding Ninjas(<a href="https://www.codingninjas.com/" target="_blank">www.codingninjas.com</a>) in PGDAA (Post Graduate Diploma in Analytics and Artificial Intelligence).
+						While the covid pandemic locking the world gave me an opportunity to follow my passion and hence enrolled in the hands on online course, where I ahve been working on all advanced trends in AI Industry.
+						Tools like <b>Scikit-learn, pandas, Tensorflow2, pycaret </b>made me amaze by discovering the true potential of Data and machines when properly used.
+						This part of my life is possibly the highest productive days of my life. I was always fond of history and now working with ML/DL proved them once again.
+					</p>
+					<h3 style="color: #131212; font-weight: bolder;">Bachelor of Engineering in Computer Science and Engineering (2015 to 2019)</h3>
+					<p class="work-p">
+						From United Institute of Technology, Coimbatore with <b>70%</b> academic score completed my <b>UnderGraduation in first class</b>.
+						Learning my calculus and Converting equations into Engineering Applications.
+						Traveling to newer cities for learning cultures and new technologies.
+						These four years help me to get my fundamentals right and where a remarkable period.
+					</p>
+					<h3 style="color: #131212; font-weight: bolder;">Higher Secondary School (2015)</h3>
+					<p class="work-p">
+						From Sri Ramakrishna Matric Higher Secondary School, Coimbatore with <b>73%</b> academic score completed my <b>12th board exam</b>.
+						Sports, Speech competitions and lots of hobbies developed in this stage.
+					</p>
+					<h3 style="color: #131212; font-weight: bolder;">Secondary School (2015)</h3>
+					<p class="work-p">
+						From Vidya Vikashini Matric Higher Secondary School, Coimbatore with <b>85%</b> academic score completed my <b>10th board exam</b>.
+						Never thought my life will have such huge turns during this period of life.
+					</p>
+  				</div>
+  			</div>
+            <div class="tab-pane active text-center gallery" id="works">
+      			<div class="row">
+      				<h3 style="color: #131212; font-weight: bolder;">Impiger Technologies (June-17,2019 to April-30, 2020)</h3>
+					<p class="work-p">
+						Enjoyed first career at Impiger Technologies, Coimbatore as <b>R & D Engineer</b> working in <b>Data mining and Warehousing</b> for the central government of Uganda.
+						Utilizing the full potential of <b>Python and Django</b> responsive web apps are created with high security fashion.
+						The main challenges where handling large amount of <b>confidential data and data mining and visualizing</b> them to useful information for the central government of Uganda.
+						The high growing company gave me to work on few existing projects like NUSAF(<a href="https://nusafmis.opm.go.ug/about_us/" target="_blank"> https://nusafmis.opm.go.ug</a>), and DRDIP() and also gave an opportunity to work end to end in JKMIS(<a href="http://greenjobs.mglsd.go.ug/" target="_blank"> http://greenjobs.mglsd.go.ug/</a>).
+					</p>
+					<p class="work-p">
+						The role involves creating <b>REST API</b> for biometric devices and mobile applications, ODK data collect and creating user friendly web applications that are highly reusable and scalable.
+						Both <b>SQL and No-SQL</b> databases where used to store the high volume of information and trends & graphs are derived from those sophisticated data to help government to take sensible decisions.
+					</p>
+					<p class="work-p">
+						Had an opportunity to upgrade Django, Python and other libraries used in older projects to LTS versions, adding newer features, handling deprecated methods and libraries and successfully deploying the higher version in production.
+					</p>
+      			</div>
+  			</div>
+            <div class="tab-pane text-center gallery" id="favorite">
+      			<div class="row">
+      				<div class="col-md-6">
+						<h3 style="color: #131212; font-weight: bolder; text-align: left">Cover Letter</h3>
+						<p class="work-p">
+							Fresh minder with design thinking skills and a passionate learner of technologies through building and experimenting.
+						</p>
+						<p class="work-p">
+							Ready to travel the globe and explore it to the fullest. Looking for challenging opportunities and to serve society through technology and engineering.
+						</p>
+						<p class="work-p">
+							Always open to ideas and innovatives. Ready to get along with like-minded peers and to have fun while working and giving solutions to complex problems in any domain or area. Reseach and Experiments are the words that brings energy to my soul and am looking forward to meet exciting like-minded people to share rest of my career journey.
+						</p>
+						<p class="work-p" style="font-size: 36px;color: #89229b;">
+						𝒜𝓀𝓈𝒽𝒶𝓎𝓇𝒶𝒿
+						</p>
+					</div>
+      				<div class="col-md-6">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125323.47388556194!2d76.89719438555319!3d11.011701573397609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1607164812952!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      			    	<h3 style="text-transform: lowercase; size: 22px !important;color: #89229b;">
+						<a href="#" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-mobile"></i></a>(+91) 76 39 39 3821
+						<a href="#" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-envelope"></i></a>axylone@gmail.com
+					</h3>
+					</div>
+      			</div>
+      		</div>
+          </div>
+
+
+            </div>
+        </div>
+	</div>
+{% endblock %}

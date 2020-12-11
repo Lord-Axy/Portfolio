@@ -1,0 +1,99 @@
+{% extends "portfolio/header.html" %}
+{% load static %}
+
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+<div class="page-header header-filter" data-parallax="true" style="background-image:url('https://techstory.in/wp-content/uploads/2018/11/cover.jpg');"></div>
+    <div class="main main-raised">
+		<div class="profile-content">
+            <div class="container">
+                <div class="row">
+                        <h3>{{ proj.name }}</h3>
+
+                </div>
+                {% if proj.html %}
+				<div class="row">
+					<div class="col-md-6 ml-auto mr-auto">
+                        <div class="profile-tabs">
+                          <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+							  <li class="nav-item">
+                                <a class="nav-link active" href="#works" role="tab" data-toggle="tab">
+                                  <i class="material-icons">article</i>
+                                    Description
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#studio" role="tab" data-toggle="tab">
+                                  <i class="material-icons">code</i>
+                                  Code
+                                </a>
+                            </li>
+
+
+                          </ul>
+                        </div>
+    	    	</div>
+            </div>
+                {% endif %}
+
+          <div class="tab-content tab-space">
+            <div class="tab-pane active gallery" id="works">
+                <img src="{{ proj.image.url }}" class="img-thumbnail" style="height: -webkit-fill-available;" alt="{{ proj.image }}">
+  				{% if proj.tools %}
+                <div class="row">
+  					<h3 style="color: #131212; font-weight: bolder;">Tools Utilized:</h3>
+                </div>
+                <div class="row">
+                    <table>
+                    {% for tool in tools %}
+                        <tr> <td><i class="material-icons">done_all</i></td><td>{{ tool }}</td></tr>
+                    {% endfor %}
+                    </table>
+  				</div>
+                {% endif %}
+                {% if proj.dataset %}
+                <div class="row">
+  					<h3 style="color: #131212; font-weight: bolder;">Dataset link:</h3>
+                </div>
+                <div class="row">
+  					<a href= "{{ proj.dataset }}" target="_blank">{{ proj.dataset }}</a>
+                </div>
+                {% endif %}
+                {% if proj.github_link %}
+                <div class="row">
+  					<h3 style="color: #131212; font-weight: bolder;">Github link:</h3>
+                </div>
+                <div class="row">
+  					<a href= "{{ proj.github_link }}" target="_blank">{{ proj.github_link }}</a>
+                </div>
+                {% endif %}
+                {% if proj.description %}
+                <div class="row">
+  					<h3 style="color: #131212; font-weight: bolder;">Description:</h3>
+                </div>
+                <div class="row">
+
+                    {% for tool in description %}
+                        <p class="work-p" style="font-size: 1.2rem;">{{ tool }}</p>
+                    {% endfor %}
+
+  				</div>
+                {% endif %}
+
+  			</div>
+              {% if proj.html %}
+            <div class="tab-pane text-center gallery" id="studio">
+      			<div class="row">
+      				<iframe class="col-md-12" style="display:block; width:100%; height:200vh; overflow: hidden;" src="../media/{{ proj.html }}"></iframe>
+      			</div>
+  			</div>
+              {% endif %}
+
+          </div>
+
+
+            </div>
+        </div>
+	</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="h-100">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
+    <link rel="stylesheet" href="{% static 'styles/profile.css' %}">
+
+</head>
+  <body  class="profile-page">
+  <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg "  color-on-scroll="100"  id="sectionsNav">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="/">𝒜𝓀𝓈𝒽𝒶𝓎𝓇𝒶𝒿 M </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="dropdown nav-item">
+                      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+                          <i class="material-icons">apps</i> Projects
+                      </a>
+                      <div class="dropdown-menu dropdown-with-icons">
+                        <a href="/projects?type=Artificial Intelligence" class="dropdown-item">
+                            <i class="material-icons">psychology</i> AI Projects
+                        </a>
+
+                        <a href="/projects?type=others" class="dropdown-item">
+                            <i class="material-icons">emoji_symbols</i> Other works
+                        </a>
+                      </div>
+                    </li>
+      				<li class="nav-item">
+      					<a class="nav-link" href="javascript:void(0)">
+      						<i class="material-icons">cloud_download</i> Resume
+      					</a>
+      				</li>
+      				<li class="nav-item">
+      					<a class="nav-link" href="https://twitter.com/CreativeTim" target="_blank">
+      						<i class="fa fa fa-github"></i>
+      					</a>
+      				</li>
+      				<li class="nav-item">
+      					<a class="nav-link" href="https://www.facebook.com/CreativeTim" target="_blank">
+      						<i class="fa fa-facebook-square"></i>
+      					</a>
+      				</li>
+      				<li class="nav-item">
+      					<a class="nav-link"  href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+      						<i class="fa fa-instagram"></i>
+      					</a>
+      				</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+  	<footer class="footer text-center ">
+        <p>Looking to hire me or you are a like minded weirdo?. get in touch at "<b>axylone@gmail.com</b>"</p>
+    </footer>
+
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script src="{% static 'js/profile.js' %}" ></script>
+    <script src="{% static 'js/projects.js' %}" ></script>
+
+  </body>
+</html>

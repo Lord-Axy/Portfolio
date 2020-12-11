@@ -1,0 +1,53 @@
+{% extends "portfolio/header.html" %}
+{% load static %}
+
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+<head>
+        <link rel="stylesheet" href="{% static 'styles/projects.css' %}">
+</head>
+<div class="page-header header-filter" data-parallax="true" style="background-image:url('https://techstory.in/wp-content/uploads/2018/11/cover.jpg');"></div>
+    <div class="main main-raised">
+		<div class="profile-content">
+            <div class="container">
+                <div class="row">
+                    <h3>{{ type }}</h3>
+                </div>
+                <div class="row">
+                      {% for proj in projs %}
+                    <div class="card-wrapper col-md-4">
+                    <div class="card-1 card-object card-object-hf" style="background: #222 url({{ proj.image.url }}) 90% 35%;"><a class="face front" href="#">
+                        <div class="title-wrapper">
+                          <div class="title">{{ proj.name }}</div>
+                          <div class="subtitle" style="color:#fff;" ><b>{% if proj.category.name == 'Artificial Intelligence' %}
+                              {% if proj.is_ml %}
+                              Machine Learning
+                              {% else %}
+                              Deep Learning
+                              {% endif %}
+                              {% else %} {{ proj.category.name }}{% endif %}</b></div>
+                        </div></a>
+                        <a class="face back" href="#">
+                        <div class="img-wrapper" style="background: transparent url({{ proj.image.url }}) 70% 50%;">
+<!--                          <div class="avatar"></div>-->
+                        </div>
+                        <div class="info-wrapper">
+                          <div class="info-title">{{ proj.name }}</div>
+                          <ul class="info-content">
+                            <li class="info-content-item"><span></span></li>
+                            <li class="info-content-item"><button class="btn btn-primary" onclick="location.href = '/projects/code?id={{ proj.id }}';">Explore</button></li>
+                            <li class="info-content-item"><span></span></li>
+                          </ul>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                      {% endfor %}
+
+
+            </div>
+        </div>
+	</div>
+{% endblock %}
